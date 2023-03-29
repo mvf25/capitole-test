@@ -1,5 +1,12 @@
 package com.capitole.technicaltest.service;
 
-public class IProductsService {
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public interface IProductsService {
+	
+	List<Integer> getAvailable();
 
 }

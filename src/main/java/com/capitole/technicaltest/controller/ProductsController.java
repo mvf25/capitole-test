@@ -1,5 +1,7 @@
 package com.capitole.technicaltest.controller;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +26,7 @@ public class ProductsController {
 			
 	@GetMapping(path = "/")
 	@Operation(summary = "Products list", description = "All products available")
-	public String getAllProducts(){	
+	public List<Integer> getAllProducts(){	
 		return  productsService.getAvailable();
 		
 	}
